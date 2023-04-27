@@ -9,9 +9,12 @@ import MovieHeader from './components/MovieHeader';
 
 import AddMovieForm from './components/AddMovieForm';
 import FavoriteMovieList from './components/FavoriteMovieList';
+import { useSelector } from "react-redux";
 
 const App = props => {
-  const displayFavorites = true;
+  const displayFavorites = useSelector(
+    store => store.favoritesReducer.displayFavorites
+  );
 
   return (
     <div>

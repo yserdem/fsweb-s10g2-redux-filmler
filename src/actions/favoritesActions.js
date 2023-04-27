@@ -7,6 +7,7 @@ export const toggleFavorites = () => {
 }
 
 export const addFavorite = (movie) => {
+  const favMovie = { id: movie.id, title: movie.title }
   return ({ type: ADD_FAVORITE, payload: movie });
 }
 
